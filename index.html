@@ -3,16 +3,99 @@
 <head>
 	<meta charset='UTC-8'>
 	<title>St John Ambulance Walkinstown</title>
-	<style type="text.css" src='css\bootstrap.css'></style>
-	<style type="text.css" src="css\bootstrap-theme.css"></style>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css\bootstrap-theme.css"></style>
+	<link  rel ='stylesheet' type='text/css' href="css\index.css"></style>
 </head>
 <body>
+<header class='row'>
+  <!--<img class=" logo col-md-3 center" src="img\St._John_Logo.jpeg">-->
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+    	<ul class="nav navbar-nav col-s-4center offset-col-s-4">
+     		<li class="active"><a href="#">Home</a></li>
+      		<li class="dropdown">
+        		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Public
+        		<span class="caret"></span></a>
+        		<ul class="dropdown-menu">
+          			<li><a href="#">Event Cover</a></li>
+          			<li><a href="#">Training</a></li>
+          		</ul>
+      		</li>
+      		<li><a href="#">Members</a></li> 
+      		<li><a href="#">Admin</a></li> 
+    	</ul>
+    	<ul class="nav navbar-nav navbar-right">
+      		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	</ul>
+    </div>
+  </nav>
+</header>
+
+
+<section class="container">	
+  <div id="MyCarousel" class="carousel slide" data-ride="carousel">
+	<!--Indicators-->
+	<ol class="carousel-indicators">
+		<li data-target="#MyCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#MyCarousel" data-slide-to="1"></li>
+		<li data-target="#MyCarousel" data-slide-to="2"></li>
+		<li data-target="#MyCarousel" data-slide-to="3"></li>
+		<li data-target="#MyCarousel" data-slide-to="4"></li>
+	</ol>
+
+	<!--slide wrapper-->
+	<div class="carousel-inner" >
+		<figure class="item active">
+			<img src="img\inspection1.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\Medals2.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\Division.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\cycle.jpg">
+		</figure>
+		<figure class="item">
+			<img src="img\ambulance.jpg">
+		</figure>
+	</div><!--close slide wrapper-->	
+
+	<!--controls-->
+	<a class='carousel-control left' href='#MyCarousel' role='button' data-slide='prev'>
+		
+	</a>
+
+	<a class='carousel-control right' href='#MyCarousel' role='button' data-slide='next'>
+		
+	</a>
+  </section><!--carousel-->
+  <section class='row' id='mainContent'>
+  <article>
+  	<h2> Tradition, Service, Friendship</h2>
+  	<p> One of the longest serving divisions in Dublin, Walkinstown Drimnagh Castle has a proud history of serving the people of Dublin. Many former members have moved into important roles in St. John Headquarters leaving behind a well structued, motivated and enthusiastic young division eager to build on its traditions. Taking members from a wide catchment area, the Senior and Cadet divisons work incredibly closely leading to  </p>
+  </article>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLLeZPevnJV54jhjDA6qkSAcvsBwEWkxPG" frameborder="0" allowfullscreen></iframe>
+
+  <footer class='row'>
+ 	<div class="col-s-4">
+ 		<p>Loremlwefjrpgjpsejghposetj[ohjstphnasjg oighipehjgpoaejofgarepoh</p>
+
+ 	</div>
+ 	<div class="col-s-4">
+ 		<p>jkbrgksjhpgaesboirghsepatlh</p>
+ 	</div>
+ 	<div class="col-s-4">
+ 		<p>jregiowejr</p>
+ 	</div>
+
+  </footer>
 
 
 
-
-
-
+<script src="http://code.jquery.com/jquery.min.js"></script>
 <script src="js\bootstrap.js"></script>
 </body>
 </html>
