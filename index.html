@@ -12,26 +12,29 @@
 	async defer></script>
 	<script src="js/maps.js"></script>
 	<script src="js/twitter.js"></script>
+	<script src="js/login_validate.js"></script>
 	
 </head>
 <body>
 <header class='container'>
-  <img class=" logo col-md-3 center" src="img/bigLogo.png">
 	<nav class="row">
-	
-    	<ul class="nav nav-pills nav-justified col-sm-4">
+	    	<ul class="nav nav-pills nav-justified col-sm-4">
      		<li class="active"><a href="#">Home</a></li>
-      		<li class="dropdown">
-        		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Public
-        		<span class="caret"></span></a>
-        		<ul class="dropdown-menu">
-          			<li><a href="eventCover.html">Event Cover</a></li>
-          			<li><a href="training.html">Training</a></li>
-          		</ul>
-      		</li>
-      		<li><a href="#">Members</a></li> 
+      		<li><a href="eventCover.html">Event Cover</a></li>
+          	<li><a href="training.html">Training</a></li>
+          
       		 
-      		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      		<li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login
+        		<span class="caret"></span></a>
+
+        		<form class="dropdown-menu" id="login" method="post" name="memberLogin">
+        			Username:<br>
+        			<input type="text" name="username" id="username"></input><br>
+        			Password:<br>
+        			<input type="password" name="password" id="password"></input><br>
+        			<input type="button" value="Login" id="submit" onclick="validate()">
+        		</form>
+        	</li>
     	</ul>
     </div>
   </nav>
@@ -61,10 +64,10 @@
 			<img src="img\Division.jpg">
 		</figure>
 		<figure class="item">
-			<img src="img\cycle.jpg">
+			<img src="img\Awards1.jpg">
 		</figure>
 		<figure class="item">
-			<img src="img\ambulance.jpg">
+			<img src="img\March.jpg">
 		</figure>
 	</div><!--close slide wrapper-->	
 
@@ -80,29 +83,37 @@
   	<article>
   	  <div class='col-sm-8'>
   		<h2 > Tradition, Service, Friendship</h2>
-  		<p> One of the longest serving divisions in Dublin, Walkinstown Drimnagh Castle has a proud history of serving the people of Dublin. Many former members have moved into important roles in St. John Headquarters leaving behind a well structued, motivated and enthusiastic young division eager to build on its traditions. Taking members from a wide catchment area, the Senior and Cadet divisons work cosely leading to a large number of cadets making the successful transition to the senior division. We meet every Friday night from 8-10pm and our trianing covers a wide variety of topics ranging from basic first aid to advanced EMT skills as well as specialist topics. </p>
-  		<p>Our members are very active at both local and national public duties showing off their skill at events as varies as: American Football, Leinster Rugby, Croke Park concerts and matches , Marathons, run, Triatholons and many many more. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  		<p> One of the longest serving divisions in Dublin, Walkinstown Drimnagh Castle has a proud history of serving the people of Dublin. Many former members have moved into important roles in St. John Headquarters leaving behind a well structued, 			motivated and enthusiastic young division eager to build on its traditions. Taking members from a wide catchment area, the Senior and Cadet divisons work cosely leading to a large number of cadets making the successful transition to the senior 	division. We meet every Friday night from 8-10pm and our trianing covers a wide variety of topics ranging from basic first aid to advanced EMT skills as well as specialist topics. </p>
+  		<p>Our members are very active at both local and national public duties showing off their skill at events as varies as: American Football, Leinster Rugby, Croke Park concerts and matches , Marathons, run, Triatholons and many many more. Lorem ipsum 	 dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   	  </div>	
   	</article>
  	<div class='col-sm-4'>
+ 		<h4>Resources</h4>
  		<iframe class='trainingVids' src="https://www.youtube.com/embed/videoseries?list=PLLeZPevnJV54jhjDA6qkSAcvsBwEWkxPG"></iframe>
  		<article class= 'thought-box '>
  		<p>
- 			<strong>Thought of the Day:</strong>
+ 			<strong>Thought of the Day:</strong><br>
 			If its wet, sticky or not yours; <em>WEAR GLOVES</em>
 			</p>
 		</article>
+		<h5>Some Useful Links</h5>
+		<ul id="links">
+			<li>St John Ireland</li>
+			<li>Irish Heart Foundation</li>
+			<li>Asthma Ireland</li>
+			<li>Epilepsy Ireland</li>
+		</ul>
  	</div>
 
  	
