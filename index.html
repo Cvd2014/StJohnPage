@@ -8,11 +8,12 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	
-	<script src="http://maps.googleapis.com/maps/api/js?callback=initMap"
-	async defer></script>
+	
 	<script src="js/maps.js"></script>
 	<script src="js/twitter.js"></script>
 	<script src="js/login_validate.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?callback=initMap"
+	async defer></script>
 	
 </head>
 <body>
@@ -32,7 +33,7 @@
         			<input type="text" name="username" id="username"></input><br>
         			Password:<br>
         			<input type="password" name="password" id="password"></input><br>
-        			<input type="button" value="Login" id="submit" onclick="validate()">
+        			<input type="button" value="Login" id="submit" onclick="login_validate()">
         		</form>
         	</li>
     	</ul>
