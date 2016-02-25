@@ -5,6 +5,7 @@ function login_validate(){
     var trainingData=[]
     var dutyData=[]
     var accountData=[]
+    var fullData=[]
     var username=document.getElementById('username').value;
     var password=document.getElementById('password').value;
     $.ajax({
@@ -14,7 +15,7 @@ function login_validate(){
         $.each(Data, function(key, oPerson){
             //console.log(key);
             
-            console.log(oPerson);
+            //console.log(oPerson);
 
             name=oPerson.username;
             person=oPerson.Name;
@@ -29,8 +30,8 @@ function login_validate(){
             hours=oPerson.DutyHours;
             email=oPerson.Email;
             phone=oPerson.Phone;
-            GV=oPerson["GVSubmitted"];
-            manualHandling=oPerson["Manual Handling"];
+            GV=oPerson["GV_Submitted"];
+            manualHandling=oPerson["ManualHandling"];
             account=oPerson.AccountOwing;
 
             loginData[name]=[pwd, admin];
@@ -39,7 +40,7 @@ function login_validate(){
             accountData[name]=[account];
             dutyData[name]=[hours];
 
-            fullData[name]=[loginData[name], personalData[name], trainingData[name], dutyData[name]];
+            fullData[name]=[loginData[name], personalData[name], trainingData[name], dutyData[name], accountData[name]];
 
         });  
 
@@ -53,20 +54,17 @@ function login_validate(){
                 }
                 
 
-                console.log("my Data....");
+               /* console.log("my Data....");
                 console.log(loginData[username])
                 console.log(personalData[username])
                 console.log(trainingData[username])
                 console.log(dutyData[username])
                 console.log(accountData[username])
+                console.log(fullData[username])
+                */
 
-
-                var sMyValue = JSON.stringify(oMyobject);
+                var sMyValue = JSON.stringify(fullData[username]);
                 localStorage.setItem("userData", sMyValue )    
-            
-
-                var sMyRetrievedData = localStorage.getItem("userData");
-                sMyRetrievedData = JSON.parse(sMyRetrievedData);
             } 
             else{
                 alert('BAD LOGIN');
